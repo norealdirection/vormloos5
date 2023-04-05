@@ -25,22 +25,22 @@ scene.add(keyLight);
 scene.add(fillLight);
 scene.add(backLight);
 
-var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setTexturePath('/examples/3d-obj-loader/assets/');
-mtlLoader.setPath('/examples/3d-obj-loader/assets/');
-mtlLoader.load('r2-d2.mtl', function (materials) {
+//var mtlLoader = new THREE.MTLLoader();
+//mtlLoader.setTexturePath('/examples/3d-obj-loader/assets/');
+//mtlLoader.setPath('/examples/3d-obj-loader/assets/');
+//mtlLoader.load('r2-d2.mtl', function (materials) {
 
-    materials.preload();
+//    materials.preload();
 
-    var objLoader = new THREE.OBJLoader();
-    objLoader.setMaterials(materials);
-    objLoader.setPath('/examples/3d-obj-loader/assets/');
-    objLoader.load('r2-d2.obj', function (object) {
+var objLoader = new THREE.OBJLoader();
+objLoader.setMaterials(materials);
+objLoader.setPath('/examples/3d-obj-loader/assets/');
+objLoader.load('Jumbo2022.obj', function (object) {
 
-        scene.add(object);
-        object.position.y -= 60;
+	scene.add(object);
+	object.position.y -= 60;
 
-    });
+//});
 
 });
 
